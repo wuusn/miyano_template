@@ -4,9 +4,9 @@
     <title><%= title %></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="created" content=<%= cre_date.inspect %> />
-    <meta name="modified" content=<%= mod_date.inspect %> />
-    <meta name="tags" content=<%= tags.inspect %>/>
+    <meta name="created" content=<%= cre_date.to_s.inspect %> />
+    <meta name="modified" content=<%= mod_date.to_s.inspect %> />
+    <meta name="tags" content=<%= tags.join(", ").inspect %>/>
     <link rel="stylesheet" href="/default.css" type="text/css">
   </head>
   <body>
