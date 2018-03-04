@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Miyano Shiho | <%= current_tag %></title>
+    <title>Miyano Shiho | <%= current_tag || "home" %></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/default.css" type="text/css">
@@ -10,10 +10,16 @@
     <main class="note-wrapper">
       <nav>
         <a href="/">#</a>
-          <% tags.each do |tag, count| %>
-            <a href="/tag/<%= tag %>/"># <%= tag %></a>
-          <% end %>
-          <a href="/about/"><svg class="svg-icon"><use xlink:href="#icon-about"></use></svg></a>
+        <% tags.each do |subtag, count| %>
+        <% if current_tag %>
+          <a href="/tag/<%= current_tag + "/" + subtag %>/"># <%= subtag %></a>
+        <% else %>
+          <a href="/tag/<%= subtag %>/"># <%= subtag %></a>
+        <% end %>
+        <% end %>
+        <% unless current_tag %>
+        <a href="/about/"><svg class="svg-icon"><use xlink:href="#icon-about"></use></svg></a>
+        <% end %>
       </nav>
       <article>
       <% posts.each do |post| %>
