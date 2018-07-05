@@ -1,0 +1,183 @@
+// Prograph(body/normal text)
+p{hyphens:auto}
+p{margin-bottom:0.1em}
+
+// Headings 1-3
+h1{
+	font-family:"AvenirNext-Medium";
+	color:#333;font-size:1.6em;
+	line-height:1.3em;
+	margin-bottom:.78571em
+}
+
+h2{
+	font-family:"AvenirNext-Medium";
+	color:#333;font-size:1.3em;
+	line-height:1em;
+	margin-bottom:.62857em
+}
+
+h3{
+	font-family:"AvenirNext-Medium";
+	color:#333;font-size:1.15em;
+	line-height:1em;
+	margin-bottom:.47143em
+}
+
+// Line Separator (line break)
+hr{height:1px;border:0;background-color:#dedede;margin:-1px auto 1.57143em auto}
+hr{margin-bottom:0.7em;margin-top:0.7em}
+
+// Bold
+b{
+	font-family:"AvenirNext-Bold"
+}
+
+// Italic
+i{font-family:"AvenirNext-Italic"}
+
+// Underline
+u{
+	text-decoration:none;
+	background-image:linear-gradient(to bottom, rgba(0,0,0,0) 50%,#e06e73 50%);
+	background-repeat:repeat-x;background-size:2px 2px;background-position:0 1.05em
+}
+
+// Strike
+s{color:#878787}
+
+// Mark (highlight)
+mark{
+	color:inherit;
+	display:inline-block;
+	padding:0px 4px;
+	background-color:#d4fea8
+}
+
+// Image
+img{max-width:100%;height:auto}
+
+// Link
+a{color:#de4c4f;text-decoration:none}
+
+// quotation
+blockquote{quotes:none}
+blockquote:before,blockquote:after{content:"";content:none}
+
+blockquote{
+	display:block;
+	margin-left:-1em;
+	padding-left:0.8em;
+	border-left:0.2em solid #e06e73
+}
+
+// Tag
+.hashtag{
+	display:inline-block;
+	color:white;
+	background:#b8bfc2;
+	padding:0.0em 0.5em;
+	border-radius:1em;
+	text-indent:0
+}
+
+.hashtag a{color:#fff}
+
+// Code inline and multiline
+code{font-family:"Menlo-Regular"}
+
+.code-inline{
+	display:inline;
+	background:white;
+	border:solid 1px #dedede;
+	padding:0.2em 0.5em;
+	font-size:0.9em
+}
+
+.code-multiline{
+	display:block;
+	background:white;
+	border:solid 1px #dedede;
+	padding:0.7em 1em;
+	font-size:0.9em;
+	overflow-x:auto
+}
+
+
+// Color Hash
+.color-preview{
+	display:inline-block;
+	width:1em;height:1em;
+	border:solid 1px rgba(0,0,0,0.3);
+	border-radius:50%;
+	margin-right:0.1em;
+	position:relative;
+	top:0.2em;
+	white-space:nowrap
+}
+
+.color-code{margin-right:0.2em;font-family:"Menlo-Regular";font-size:0.9em}
+
+.color-hash{opacity:0.4}
+
+// Ordered and Unordered List
+ol,ul{list-style:none}
+
+ul,ol{margin-bottom:.31429em}
+
+ul ul,ul ol,ol ul,ol ol{margin-bottom:0px}
+
+ol li:before{
+	content:counter(ol) ".";
+	counter-increment:ol;color:#e06e73;
+	text-align:right;
+	display:inline-block;
+	min-width:1em;
+	margin-right:0.5em
+}
+
+ul li{text-indent:-0.35em}
+
+ul li:before{content:"•";color:#e06e73;display:inline-block;margin-right:0.3em}
+
+ul ul{margin-left:1.25714em}
+
+ol li{text-indent:-1.45em}
+
+ol ol{margin-left:1.25714em}
+
+.todo-list ul {
+  margin-left: 1.88571em; }
+
+.todo-list li {
+  text-indent: -1.75em; }
+
+.todo-list li:before {
+  content: "";
+  display: static;
+  margin-right: 0px; }
+
+.todo-list {
+  text-indent: -1.7em; }
+
+.todo-list svg {
+  margin-right: 0.3em;
+  position: relative;
+  top: 0.2em; }
+
+.todobox-checked {
+  text-decoration: line-through;
+  color: #878787; }
+
+.todo-list.checked {
+  text-decoration: line-through;
+  color: #878787; }
+
+.todo-list.uncheck {}
+
+.ordered-list-number{
+	color:#e06e73;
+	text-align:right;
+	display:inline-block;
+	min-width:1em
+}

@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="/default.css" type="text/css">
   </head>
   <body>
-    <main class="note-wrapper">
-      <!-- <nav>
-        <a href="/">#</a>
-        <% tags.each do |tag| %>
-          <a href="/tag/<%= tag %>/"># <%= tag %></a>
-        <% end %>
-      </nav> -->
+    <main>
       <article>
        <%= content %>
-     </article>
+      </article>
     </main>
+    <footer>
+      <div><a href="/">Home</a></div>
+      <div>&copy; <%= Time.now.year%> Your Name</div>
+      <div> by <a href="https://github.com/wuusn/miyano/">Miyano</a></div>
+    </footer>
   </body>
-<html>
+</html>

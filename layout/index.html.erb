@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Miyano Shiho | <%= current_tag || "home" %></title>
+    <title>Your Name | <%= current_tag || "Home" %></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/default.css" type="text/css">
   </head>
   <body>
-    <main class="note-wrapper">
-      <nav>
-        <a href="/">#</a>
-        <% tags.each do |subtag, count| %>
-	        <% if current_tag %>
-	          <a href="/tag/<%= current_tag + "/" + subtag %>/"># <%= subtag %></a>
-	        <% else %>
-	          <a href="/tag/<%= subtag %>/"># <%= subtag %></a>
+    <main>
+      <div class="nav-wrapper">
+      	<nav>
+	        <a href="/">Home</a><br>
+	        <% tags.each do |subtag, count| %>
+	          <% if current_tag %>
+	            <a href="/tag/<%= current_tag + "/" + subtag %>/"><%= subtag %></a><br>
+	          <% else %>
+	            <a href="/tag/<%= subtag %>/"><%= subtag %></a><br>
+	          <% end %>
 	        <% end %>
-        <% end %>
-      </nav>
-      <article>
-      <% posts.each do |post| %>
-        <div class="post">
-          <div class="title"><a href=<%= post.url.inspect%> ><%= post.title %></a></div>
-          <div class="date"><%= post.date %></div>
-        </div>
-      <% end %>
-      </article>
-    <main/>
-    <footer></footer>
+    	 </nav>
+        <div class="line"></div>
+      </div>
+      <div class="index-wrapper">
+          <% posts.each do |post| %>
+            <div class="post">
+              <div class="title"><a href=<%= post.url.inspect%> ><%= post.title %></a></div>
+              <div class="date"><%= post.date %></div>
+              <div class="summary"><%= post.text[post.title.length+2,200].delete("#>*") %>...</div>
+            </div>
+          <% end %>
+      </div>
+    </main>
+    <footer>
+      <div><a href="/">Home</a></div>
+      <div>&copy; <%= Time.now.year%> Your Name</div>
+      <div> by <a href="https://github.com/wuusn/miyano/">Miyano</a></div>
+    </footer>
   </body>
-<html>
+</html>
