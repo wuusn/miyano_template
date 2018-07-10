@@ -106,14 +106,9 @@ footer div {
   margin: 0 1em;
 }
 
-@media only screen and (max-width: 500px) {
-  main {
-  }
-
-  main nav {
-  }
-
-  main .index-wrapper {
+@media only screen and (max-width: 320px) {
+  main .nav-wrapper {
+    display: none;
   }
 }
 
